@@ -1,0 +1,318 @@
+@charset 'UTF-8';
+
+html {
+    display: block;
+}
+
+body {
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: #333333;
+
+}
+
+
+img {   
+    max-width: 100%;
+    height: auto;
+    /*vertical-align: bottom;*/
+    border-style: none;
+}
+
+section {
+    padding: 90px 0;
+}
+
+section:nth-of-type(odd) {
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 100px;
+    padding: 0 40px;
+}
+
+.sub-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 55px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #333333;
+}
+
+/*Header*/
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;
+    box-shadow: 0 5px 10px -6px;
+    padding: 30px 40px;
+    z-index: 3;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: .05em;
+}
+
+.global-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    letter-spacing: 0.05em;
+    color: #333333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+.global-nav li {
+    margin-right: 20px;
+}
+
+/*Title Section*/
+
+.title {
+    position: relative;
+}
+
+.title-text h1 {
+    font-size: 3.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: .1em;
+
+}
+
+.title-text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-top: 2.9rem;
+}
+
+.title-text {
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
+}
+
+
+.title-pattern {
+    position: absolute;
+    z-index: 1;
+    background-image: auto auto;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, white 2px, white 4px);
+}
+
+.title-video {
+    object-fit: cover;
+    object-position: center top;
+    opacity: .7;
+}
+
+.title-text,
+.title-pattern,
+.title-video{
+    width: 98vw;
+    height: 95vh;
+}
+
+/*Work Section*/
+
+.work-list-col {
+    /*不要*/
+}
+
+.work-list-raw {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+
+.work-item {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 1.5%;
+
+}
+
+/*Skill Section*/
+
+.skill-list {
+    display: grid;
+    /*flex-wrap: wrap;
+    justify-content: space-between;*/
+    max-width: 80vw;
+    grid-template-columns: 39vw 39vw;
+    grid-template-rows: 70% 70%;
+    gap: 2vw;
+}
+
+.skill-item {
+    display: flex;
+    align-items: flex-start; /*アイテムを上揃えで配置*/
+    margin-bottom: 50px;
+}
+
+.skill-body {
+    margin-left: 30px;
+}
+
+.skill-name {
+    margin-bottom: 10px;
+}
+
+.skill-img {
+    width: 90px;
+    height: 90px;
+}
+
+/*About Section*/
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200x;
+}
+
+.profile-name {
+    margin: 2rem auto 2rem;
+}
+
+.profile-name h3 {
+    font-size: 1.9rem;
+}
+
+.profile-description {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+/*Contact Section*/
+
+.lead {
+    text-align: center;
+}
+
+.contact-item {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+/*Footer*/
+
+.footer {
+    padding: 1.9rem;
+    background-color: #333333;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #f7f7f7;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
+    /*common*/
+    .container {
+        margin: 0;
+
+    }
+    .sub-title {
+        font-size: 1.7rem;
+    }
+
+    /*header*/
+    .header {
+        visibility: hidden;
+    }
+
+    /*title */
+    .title-text h1 {
+        font-size: 1.9rem;
+    }
+    .title-text p {
+        font-size: .9rem;
+    }
+
+
+    /*Work Section*/
+    .work-list-raw {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-item {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*Skill Section*/
+    .skill-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-name h3 {
+        font-size: 1rem;        
+    }
+
+    .skill-description {
+        font-size: 14px;
+    }
+
+    /*About Section*/
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-name h3 {
+        font-size: 20px;
+    }
+
+    .profile-description {
+        font-size: 14px;
+    }
+
+    /*Contact Section*/
+    .lead p {
+        font-size: 14px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
+}
